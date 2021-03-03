@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.mainContainer {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: blanchedalmond;
+    z-index: 2;
+    transition: 0.5s;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.mainContainer header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainContainer.active {
+    right: 300px;
+}
+
+.logo {
+    font-size: 283%;
+    color: #b5eeff;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu.png');
+    filter: invert(1);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('close.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 40px;
+    background-position: center;
+}
+
+.mainContainer video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.text h3 {
+    margin-top: 50px;
+}
+
+.text h2 {
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.text p {
+    font-size: 1.2em;
+    margin: 20px 0px;
+    max-width: 700px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    background: blanchedalmond;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.text a:hover {
+    letter-spacing: 8px;
+    background-color: rgb(241, 110, 110);
+    color: rgb(10, 3, 51);
+}
+
+.text {
+    z-index: 10;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    margin-top: 0;
+    display: inline-block;
+    margin-right: 10px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a img {
+    width: 60px;
+    height: 60px;
+}
+
+.social li a:hover {
+    transform: scale(0.5) translateY(-20px);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #dcc3f8;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    font-size: 25px;
+    text-shadow: 6px 6px 25px red, -6px -6px 25px red, -6px 6px 25px red, 6px -6px 25px red;
+}
+
+.heading {
+    position: relative;
+    font-size: 124%;
+    letter-spacing: 7px;
+    color: cornsilk;
+    top: 36em;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+#services {
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 15em;
+    background-color: antiquewhite;
+    font-size: 300%;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.plans {
+    position: absolute;
+    display: flex;
+    height: 350px;
+    border: 3px solid #5c9192;
+    left: 36px;
+    text-align: center;
+    width: 94%;
+    background-color: black;
+    top: 52em;
+    border-radius: 62px;
+    transition: 0.7s;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.plans:hover {
+    box-shadow: 3px 3px 25px #5c9192, -3px -3px 25px #5c9192, 3px -3px 25px #5c9192, -3px 3px 25px #5c9192;
+}
+
+.subplan {
+    position: relative;
+    bottom: 21px;
+    height: 270px;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+    padding: 17px;
+    margin: 60px;
+    border-radius: 44px 44px 0px 0px;
+    background-color: antiquewhite;
+    transition: 0.5s;
+}
+
+.subplan:hover {
+    border-radius: 0px 0px 44px 44px;
+    height: 290px;
+    width: 320px;
+}
+
+.subplan video {
+    position: relative;
+    height: 143px;
+    width: 200px;
+}
+
+#offers {
+    position: absolute;
+    top: 27em;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    height: 70px;
+    width: 100%;
+    background-color: antiquewhite;
+    font-size: 300%;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.form {
+    position: absolute;
+    border: 3px solid #5c9192;
+    border-radius: 62px;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    top: 89em;
+    font-family: 'RocknRoll One', sans-serif;
+    transition: 0.6s;
+}
+
+.form:hover {
+    box-shadow: 3px 3px 25px #5c9192, -3px -3px 25px #5c9192, 3px -3px 25px #5c9192, -3px 3px 25px #5c9192;
+}
+
+.subform {
+    position: relative;
+    margin: 30px;
+    padding: 12px;
+    height: 270px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    transition: 0.6s;
+}
+
+.subform img {
+    margin-top: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.subform:hover {
+    height: 299px;
+    width: 329px;
+    border-radius: 0px 50px 0px 0px;
+}
+
+.price {
+    display: flex;
+    margin-top: 6px;
+}
+
+.amt {
+    margin-left: 10px;
+    margin-top: -16px;
+    font-size: 131%;
+}
+
+.about {
+    position: absolute;
+    font-size: 140%;
+    border: 4px solid #5c9192;
+    height: 490px;
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    top: 83em;
+    left: 64px;
+    color: antiquewhite;
+    border-radius: 62px;
+    transition: 0.5s;
+    font-family: 'Concert One', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Special Elite', cursive;
+}
+
+.about:hover {
+    box-shadow: 3px 3px 25px #5c9192, -3px -3px 25px #5c9192, 3px -3px 25px #5c9192, -3px 3px 25px #5c9192;
+}
+
+.about h3 {
+    font-size: 180%;
+    transition: 0.5s;
+}
+
+.about h3:hover {
+    font-size: 270%;
+    color: rgb(245, 76, 47);
+}
+
+.about p {
+    text-align: justify;
+    margin-top: 25px;
+}
+
+/* parent item with position relaive */
+
+.loginbox {
+    border: 10px solid #5c9192;
+    border-radius: 60px;
+    display: table;
+    background-color: wheat;
+    position: relative;
+    top: 159em;
+    width: 750px;
+    height: 650px;
+    font-family: 'RocknRoll One', sans-serif;
+    transition: 0.7s;
+    margin-left: 250px;
+}
+
+.loginbox:hover {
+    box-shadow: 3px 3px 25px #5c9192, -3px -3px 25px #5c9192, 3px -3px 25px #5c9192, -3px 3px 25px #5c9192;
+}
+
+.loginboxIMG {
+    border-radius: 60px;
+    background-image: url('work.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 650px;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+/* child item with pos absolute */
+
+.textbox {
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    height: 400px;
+}
+
+.textbox h3 {
+    border-radius: 10px;
+    opacity: 0.5;
+    border: 8px solid rgb(202, 206, 255);
+    margin-left: 35px;
+    font-size: 180%;
+    
+    transition: 0.7s;
+    background-color: white;
+    ;
+}
+
+.textbox input {
+    border: 2px solid rgb(57, 11, 100);
+    background-color: lemonchiffon;
+    font-weight: bold;
+    border-radius: 20px;
+    padding-left: 8px;
+    height: 35px;
+    width: 220px;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+.textbox button {
+    margin-top: 30px;
+    margin-left: 35px;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(206, 209, 235);
+    transition: 0.6s;
+    border: 4px solid wheat;
+}
+
+.textbox button:hover {
+    background-color: red;
+    width: 200px;
+    color: snow;
+}
